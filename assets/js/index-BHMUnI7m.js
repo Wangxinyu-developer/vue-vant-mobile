@@ -7,13 +7,13 @@ import {
 	f as n,
 	a as e,
 	w as d,
-	S as g,
-	j as V,
-	h as b,
+	h as g,
+	S as V,
+	i as b,
 	p as x,
 	k as h,
 	_ as q,
-} from './index-C6_Iw7_a.js';
+} from './index-CtK80vqh.js';
 const S = o => (x('data-v-d3021d64'), (o = o()), h(), o),
 	k = { class: 'login' },
 	y = { class: 'infoForm' },
@@ -32,15 +32,15 @@ const S = o => (x('data-v-d3021d64'), (o = o()), h(), o),
 		__name: 'index',
 		setup(o) {
 			const s = v({ username: '', password: '' }),
-				p = r => {
+				i = r => {
 					console.log(r),
-						g.set('token', 'values  weqweqweqwedsafasgg'),
-						V.push('/');
+						V.set('token', 'values  weqweqweqwedsafasgg'),
+						b.push('/');
 				};
 			return (r, t) => {
 				const c = a('van-field'),
-					u = a('van-cell-group'),
-					i = a('van-button'),
+					p = a('van-cell-group'),
+					u = a('van-button'),
 					m = a('van-form');
 				return (
 					f(),
@@ -49,11 +49,11 @@ const S = o => (x('data-v-d3021d64'), (o = o()), h(), o),
 							I,
 							e(
 								m,
-								{ onSubmit: p },
+								{ onSubmit: i },
 								{
 									default: d(() => [
 										e(
-											u,
+											p,
 											{ inset: '' },
 											{
 												default: d(() => [
@@ -95,7 +95,7 @@ const S = o => (x('data-v-d3021d64'), (o = o()), h(), o),
 											},
 										),
 										e(
-											i,
+											u,
 											{
 												class: 'login-btn',
 												round: '',
@@ -103,7 +103,7 @@ const S = o => (x('data-v-d3021d64'), (o = o()), h(), o),
 												type: 'primary',
 												'native-type': 'submit',
 											},
-											{ default: d(() => [b(' 登录 ')]), _: 1 },
+											{ default: d(() => [g(' 登录 ')]), _: 1 },
 										),
 									]),
 									_: 1,

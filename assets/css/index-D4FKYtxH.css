@@ -144,6 +144,10 @@ button:focus-visible {
 		transform: rotate(360deg);
 	}
 }
+canvas[data-v-1fcc7cb1] {
+	max-width: 100%;
+	display: block;
+}
 :root,
 :host {
 	--van-black: #000;
@@ -7242,4 +7246,42 @@ ul {
 }
 .van-watermark--full {
 	position: fixed;
+}
+.signContainer[data-v-f37a326f] {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-color: #fff;
+}
+.signContainer .btns[data-v-f37a326f] {
+	width: 55px;
+	background-color: #f8f8f8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.signContainer .btns .reset[data-v-f37a326f] {
+	margin-bottom: 70px;
+}
+.signContainer .vue-esign[data-v-f37a326f] {
+	z-index: 2;
+}
+.signContainer .tipText[data-v-f37a326f] {
+	position: absolute;
+	top: 50%;
+	width: var(--width);
+	left: calc(50% + 55px);
+	transform: translate(-50%) translateY(-50%) rotate(90deg);
+	text-align: center;
+	color: #ddd;
+	letter-spacing: 2px;
+}
+[data-v-f37a326f] .van-button {
+	width: 85px !important;
+	height: 35px;
+	transform: rotate(90deg) translateY(15px);
+	text-align: center;
+}
+[data-v-f37a326f] .van-button .van-button__text {
+	letter-spacing: 5px;
 }
