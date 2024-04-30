@@ -10,21 +10,21 @@ import {
 	F as k,
 	g as x,
 	w as v,
-	t as y,
-	h as V,
-	i as g,
+	h as y,
+	i as V,
+	t as g,
 	j as C,
 	p as X,
 	k as S,
 	_ as w,
-} from './index-C6_Iw7_a.js';
+} from './index-CtK80vqh.js';
 const I = e => (X('data-v-64af545b'), (e = e()), S(), e),
 	N = { class: 'list-container' },
 	B = { class: 'acceptance-list-item' },
 	K = { class: 'item-title' },
 	F = { class: 'item-title-left' },
 	j = I(() => a('div', { class: 'item-title-right' }, '验收合格', -1)),
-	D = g(
+	D = C(
 		'<div class="item-info" data-v-64af545b><div class="info-date info-item" data-v-64af545b><div class="info-item-label" data-v-64af545b>验收时间：</div><div class="info-item-value" data-v-64af545b>2021-01-01</div></div><div class="info-saler info-item" data-v-64af545b><div class="info-item-label" data-v-64af545b>销售经理：</div><div class="info-item-value" data-v-64af545b>XXX</div></div><div class="implementation-person info-item" data-v-64af545b><div class="info-item-label" data-v-64af545b>实施人员：</div><div class="info-item-value" data-v-64af545b>XXX</div></div></div>',
 		1,
 	),
@@ -34,7 +34,7 @@ const I = e => (X('data-v-64af545b'), (e = e()), S(), e),
 			const n = u({ searchKey: '' }),
 				o = h(),
 				r = () => {
-					C.push('/acceptance/create');
+					V.push('/acceptance/create');
 				};
 			return (L, c) => {
 				const _ = t('van-nav-bar'),
@@ -67,7 +67,7 @@ const I = e => (X('data-v-64af545b'), (e = e()), S(), e),
 									null,
 									x(15, (i, T) =>
 										a('div', B, [
-											a('div', K, [a('div', F, '凤凰岭项目' + y(i), 1), j]),
+											a('div', K, [a('div', F, '凤凰岭项目' + g(i), 1), j]),
 											D,
 										]),
 									),
@@ -82,7 +82,7 @@ const I = e => (X('data-v-64af545b'), (e = e()), S(), e),
 										s(
 											m,
 											{ block: '', type: 'warning', onClick: r },
-											{ default: v(() => [V('创建验收记录')]), _: 1 },
+											{ default: v(() => [y('创建验收记录')]), _: 1 },
 										),
 									]),
 									_: 1,

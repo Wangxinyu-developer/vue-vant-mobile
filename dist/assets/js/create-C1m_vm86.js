@@ -3,14 +3,14 @@ import {
 	b as x,
 	r as s,
 	o as M,
-	c as j,
+	c as N,
 	a as o,
 	f as g,
 	w as n,
-	j as k,
 	h as d,
-	_ as N,
-} from './index-C6_Iw7_a.js';
+	i as k,
+	_ as j,
+} from './index-CtK80vqh.js';
 const $ = { class: 'acceptance-create-page', ref: 'container' },
 	A = { class: 'form-container' },
 	B = { style: { margin: '16px' } },
@@ -94,7 +94,7 @@ const $ = { class: 'acceptance-create-page', ref: 'container' },
 					D = s('van-form');
 				return (
 					M(),
-					j(
+					N(
 						'div',
 						$,
 						[
@@ -589,5 +589,5 @@ const $ = { class: 'acceptance-create-page', ref: 'container' },
 			};
 		},
 	}),
-	I = N(h, [['__scopeId', 'data-v-1e8f2134']]);
+	I = j(h, [['__scopeId', 'data-v-1e8f2134']]);
 export { I as default };
