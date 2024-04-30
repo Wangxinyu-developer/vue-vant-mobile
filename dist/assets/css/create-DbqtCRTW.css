@@ -1,11 +1,11 @@
-.acceptance-create-page[data-v-fc97b047] {
+.acceptance-create-page[data-v-1e8f2134] {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }
-.acceptance-create-page .form-container[data-v-fc97b047] {
+.acceptance-create-page .form-container[data-v-1e8f2134] {
 	flex: 1;
 	overflow-y: auto;
 }

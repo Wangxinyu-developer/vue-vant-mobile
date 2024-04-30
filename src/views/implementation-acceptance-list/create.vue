@@ -166,6 +166,16 @@
                         placeholder="请填写项目负责人"
                         :rules="[{ required: true, message: '请填写项目负责人' }]"
                     />
+                    <van-field
+                        name="button"
+                        label="项目负责人"
+                    >
+                        <template #input>
+                            <van-button round block type="primary" @click="toEsign">
+                                电子签名
+                            </van-button>
+                        </template>
+                    </van-field>
                 </van-cell-group>
                 <div style="margin: 16px;">
                     <van-button round block type="primary" native-type="submit">
@@ -261,6 +271,9 @@ const onConfirmSelect = ({ selectedOptions }: { selectedOptions: any[] }) => {
 const openSelectPicker = (type: string) => {
     state.showSelectPicker = true;
     state.selectedAttr = type;
+};
+const toEsign = () => {
+    router.push('/acceptance/esign');
 };
 </script>
 <style lang="less" scoped>

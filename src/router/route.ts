@@ -18,6 +18,12 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				component: () =>
 					import('@/views/implementation-acceptance-list/create.vue'),
 			},
+			{
+				path: '/acceptance/esign',
+				name: 'acceptanceEsign',
+				component: () =>
+					import('@/views/implementation-acceptance-list/esign.vue'),
+			},
 		],
 	},
 ];

@@ -17,7 +17,7 @@ import {
 	p as X,
 	k as S,
 	_ as w,
-} from './index-Bf9mgnPZ.js';
+} from './index-C6_Iw7_a.js';
 const I = e => (X('data-v-64af545b'), (e = e()), S(), e),
 	N = { class: 'list-container' },
 	B = { class: 'acceptance-list-item' },
