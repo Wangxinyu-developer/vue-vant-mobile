@@ -1,0 +1,65 @@
+{
+	"name": "v3",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"packageManager": "pnpm@9.0.5",
+	"author": "wangxinyu-developer",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc && vite build",
+		"preview": "vite preview",
+		"serve": "serve",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{js,json}": [
+			"prettier --write"
+		],
+		"*.ts?(x)": [
+			"eslint --fix",
+			"prettier --parser=typescript --write"
+		],
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
+	},
+	"dependencies": {
+		"less": "^4.2.0",
+		"nprogress": "^0.2.0",
+		"vant": "^4.8.11",
+		"vue": "^3.4.21",
+		"vue-router": "^4.3.2"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.7",
+		"@vitejs/plugin-vue": "^5.0.4",
+		"@vue/runtime-dom": "^3.4.25",
+		"dotenv": "^16.4.5",
+		"eslint": "^9.1.1",
+		"eslint-plugin-import-x": "^0.5.0",
+		"eslint-plugin-vitest": "^0.5.4",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"serve": "^14.2.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.5",
+		"typescript-eslint": "^7.7.1",
+		"vite": "^5.2.0",
+		"vue-tsc": "^2.0.6"
+	},
+	"engines": {
+		"node": ">=18.12.0"
+	},
+	"pnpm": {
+		"peerDependencyRules": {
+			"allowedVersions": {
+				"typescript-eslint>eslint": "^9.0.0",
+				"@typescript-eslint/eslint-plugin>eslint": "^9.0.0",
+				"@typescript-eslint/parser>eslint": "^9.0.0",
+				"@typescript-eslint/type-utils>eslint": "^9.0.0",
+				"@typescript-eslint/utils>eslint": "^9.0.0"
+			}
+		}
+	}
+}
