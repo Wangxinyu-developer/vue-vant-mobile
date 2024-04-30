@@ -1,23 +1,23 @@
 import {
-	d as C,
-	b as D,
-	r,
-	o as S,
-	c as x,
+	d as S,
+	b as x,
+	r as s,
+	o as M,
+	c as j,
 	a as o,
-	f as V,
-	w as s,
-	j as M,
-	h as m,
-	_ as j,
-} from './index-Bf9mgnPZ.js';
-const N = { class: 'acceptance-create-page', ref: 'container' },
-	$ = { class: 'form-container' },
-	A = { style: { margin: '16px' } },
-	B = C({
+	f as g,
+	w as n,
+	j as k,
+	h as d,
+	_ as N,
+} from './index-C6_Iw7_a.js';
+const $ = { class: 'acceptance-create-page', ref: 'container' },
+	A = { class: 'form-container' },
+	B = { style: { margin: '16px' } },
+	h = S({
 		__name: 'create',
-		setup(h) {
-			const l = D({
+		setup(E) {
+			const l = x({
 					projectName: '',
 					address: '',
 					company: '',
@@ -42,76 +42,79 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 					selectOptions: [],
 					selectedAttr: 'salesManager',
 				}),
-				g = () => {
-					M.go(-1);
+				b = () => {
+					k.go(-1);
 				},
-				k = n => {
-					console.log('submit', n);
+				v = r => {
+					console.log('submit', r);
 				},
-				v = ({ selectedValues: n }) => {
+				f = ({ selectedValues: r }) => {
 					switch (l.dateSelectAttr) {
 						case 'startDate':
-							l.startDate = n.join('/');
+							l.startDate = r.join('/');
 							break;
 						case 'acceptanceDate':
-							l.acceptanceDate = n.join('/');
+							l.acceptanceDate = r.join('/');
 							break;
 					}
 					l.showPicker = !1;
 				},
-				i = n => {
-					(l.dateSelectAttr = n), (l.showPicker = !0);
+				i = r => {
+					(l.dateSelectAttr = r), (l.showPicker = !0);
 				},
-				b = ({ selectedOptions: n }) => {
+				w = ({ selectedOptions: r }) => {
 					var e, u;
 					switch (l.selectedAttr) {
 						case 'salesManager':
-							l.salesManager = (e = n[0]) == null ? void 0 : e.text;
+							l.salesManager = (e = r[0]) == null ? void 0 : e.text;
 							break;
 						case 'implementer':
-							l.implementer = (u = n[0]) == null ? void 0 : u.text;
+							l.implementer = (u = r[0]) == null ? void 0 : u.text;
 							break;
 					}
 					l.showSelectPicker = !1;
 				},
-				d = n => {
-					(l.showSelectPicker = !0), (l.selectedAttr = n);
+				m = r => {
+					(l.showSelectPicker = !0), (l.selectedAttr = r);
+				},
+				U = () => {
+					k.push('/acceptance/esign');
 				};
-			return (n, e) => {
-				const u = r('van-nav-bar'),
-					t = r('van-field'),
-					f = r('van-uploader'),
-					w = r('van-date-picker'),
-					p = r('van-popup'),
-					c = r('van-radio'),
-					U = r('van-radio-group'),
-					q = r('van-picker'),
-					P = r('van-cell-group'),
-					_ = r('van-button'),
-					y = r('van-form');
+			return (r, e) => {
+				const u = s('van-nav-bar'),
+					t = s('van-field'),
+					q = s('van-uploader'),
+					P = s('van-date-picker'),
+					p = s('van-popup'),
+					c = s('van-radio'),
+					_ = s('van-radio-group'),
+					y = s('van-picker'),
+					V = s('van-button'),
+					C = s('van-cell-group'),
+					D = s('van-form');
 				return (
-					S(),
-					x(
+					M(),
+					j(
 						'div',
-						N,
+						$,
 						[
 							o(u, {
 								title: '新建',
 								'left-text': '返回',
 								'left-arrow': '',
-								onClickLeft: g,
+								onClickLeft: b,
 							}),
-							V('div', $, [
+							g('div', A, [
 								o(
-									y,
-									{ onSubmit: k },
+									D,
+									{ onSubmit: v },
 									{
-										default: s(() => [
+										default: n(() => [
 											o(
-												P,
+												C,
 												{ inset: '' },
 												{
-													default: s(() => [
+													default: n(() => [
 														o(
 															t,
 															{
@@ -218,7 +221,7 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 															t,
 															{ name: '数量', label: '数量' },
 															{
-																input: s(() => [
+																input: n(() => [
 																	o(
 																		t,
 																		{
@@ -255,7 +258,7 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																				width: '40%',
 																				padding: '0 0 0 20px',
 																			},
-																			onClick: e[8] || (e[8] = a => d('units')),
+																			onClick: e[8] || (e[8] = a => m('units')),
 																		},
 																		null,
 																		8,
@@ -292,9 +295,9 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																],
 															},
 															{
-																input: s(() => [
+																input: n(() => [
 																	o(
-																		f,
+																		q,
 																		{
 																			modelValue: l.photos,
 																			'onUpdate:modelValue':
@@ -340,9 +343,9 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																position: 'bottom',
 															},
 															{
-																default: s(() => [
-																	o(w, {
-																		onConfirm: v,
+																default: n(() => [
+																	o(P, {
+																		onConfirm: f,
 																		onCancel:
 																			e[13] ||
 																			(e[13] = a => (l.showPicker = !1)),
@@ -385,9 +388,9 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																],
 															},
 															{
-																input: s(() => [
+																input: n(() => [
 																	o(
-																		U,
+																		_,
 																		{
 																			modelValue: l.conclusion,
 																			'onUpdate:modelValue':
@@ -396,12 +399,12 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																			direction: 'horizontal',
 																		},
 																		{
-																			default: s(() => [
+																			default: n(() => [
 																				o(
 																					c,
 																					{ name: '1' },
 																					{
-																						default: s(() => [m('验收合格')]),
+																						default: n(() => [d('验收合格')]),
 																						_: 1,
 																					},
 																				),
@@ -409,8 +412,8 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																					c,
 																					{ name: '2' },
 																					{
-																						default: s(() => [
-																							m('整改后进行复查'),
+																						default: n(() => [
+																							d('整改后进行复查'),
 																						]),
 																						_: 1,
 																					},
@@ -457,7 +460,7 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																	{ required: !0, message: '请填写销售经理' },
 																],
 																onClick:
-																	e[20] || (e[20] = a => d('salesManager')),
+																	e[20] || (e[20] = a => m('salesManager')),
 															},
 															null,
 															8,
@@ -481,7 +484,7 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																	},
 																],
 																onClick:
-																	e[22] || (e[22] = a => d('implementer')),
+																	e[22] || (e[22] = a => m('implementer')),
 															},
 															null,
 															8,
@@ -497,12 +500,12 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 																position: 'bottom',
 															},
 															{
-																default: s(() => [
+																default: n(() => [
 																	o(
-																		q,
+																		y,
 																		{
 																			columns: l.selectOptions,
-																			onConfirm: b,
+																			onConfirm: w,
 																			onCancel:
 																				e[23] ||
 																				(e[23] = a =>
@@ -536,20 +539,42 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 															8,
 															['modelValue'],
 														),
+														o(
+															t,
+															{ name: 'button', label: '项目负责人' },
+															{
+																input: n(() => [
+																	o(
+																		V,
+																		{
+																			round: '',
+																			block: '',
+																			type: 'primary',
+																			onClick: U,
+																		},
+																		{
+																			default: n(() => [d(' 电子签名 ')]),
+																			_: 1,
+																		},
+																	),
+																]),
+																_: 1,
+															},
+														),
 													]),
 													_: 1,
 												},
 											),
-											V('div', A, [
+											g('div', B, [
 												o(
-													_,
+													V,
 													{
 														round: '',
 														block: '',
 														type: 'primary',
 														'native-type': 'submit',
 													},
-													{ default: s(() => [m(' 提交 ')]), _: 1 },
+													{ default: n(() => [d(' 提交 ')]), _: 1 },
 												),
 											]),
 										]),
@@ -564,5 +589,5 @@ const N = { class: 'acceptance-create-page', ref: 'container' },
 			};
 		},
 	}),
-	E = j(B, [['__scopeId', 'data-v-fc97b047']]);
-export { E as default };
+	I = N(h, [['__scopeId', 'data-v-1e8f2134']]);
+export { I as default };
