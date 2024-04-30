@@ -1,4 +1,4 @@
-import { _ as e, o as c, c as n } from './index-CtK80vqh.js';
+import { _ as e, o as c, c as n } from './index-Dj6Npfnj.js';
 const o = {};
 function r(t, s) {
 	return c(), n('div', null, ' 404 pages ');

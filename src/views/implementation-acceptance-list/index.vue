@@ -43,7 +43,7 @@ const onClickCreate = () => {
 </script>
 <style lang="less" scoped>
 .acceptance-list-page {
-    height: 100vh;
+    height: calc(100% - var(--status-bar-height, 0px) - var(--bottom-bar-height, 0px));
     overflow: hidden;
     display: flex;
     flex-direction: column;

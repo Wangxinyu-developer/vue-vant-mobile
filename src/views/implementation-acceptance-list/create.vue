@@ -279,7 +279,7 @@ const toEsign = () => {
 <style lang="less" scoped>
 .acceptance-create-page {
     width: 100vw;
-    height: 100vh;
+    height: calc(100% - var(--status-bar-height, 0px) - var(--bottom-bar-height, 0px));
     overflow: hidden;
     display: flex;
     flex-direction: column;

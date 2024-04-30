@@ -1,0 +1,13 @@
+.acceptance-create-page[data-v-3f504ac7] {
+	width: 100vw;
+	height: calc(
+		100% - var(--status-bar-height, 0px) - var(--bottom-bar-height, 0px)
+	);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.acceptance-create-page .form-container[data-v-3f504ac7] {
+	flex: 1;
+	overflow-y: auto;
+}
