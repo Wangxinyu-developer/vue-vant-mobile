@@ -1,25 +1,14 @@
 <template>
 	<div>
-		<button @click="showSignaturePad = true">开始签名</button>
-		<vue-signature-pad
-			v-if="showSignaturePad"
-			@save="onSaveSignature"
-			@clear="onClearSignature"
-		/>
+		<SignCanvas ref="SignCanvasRef" signName="项目负责人" @sureHandler="sureSignHandler" />
 	</div>
 </template>
 
-<script setup name="SignaturePad">
-import { ref } from 'vue';
-import VueSignaturePad from 'vue-esign';
+<script setup name="SignaturePad" lang="ts">
+import { getCurrentInstance, reactive } from 'vue';
+const { proxy }: any = getCurrentInstance()
 
-const showSignaturePad = ref(false);
-const onSaveSignature = signatureData => {
-	console.log('签名数据:', signatureData);
-	// 这里可以处理签名数据，比如保存到服务器
-	showSignaturePad.value = false;
-};
-const onClearSignature = () => {
-	console.log('签名板已清空');
-};
+const sureSignHandler = (data: any, name: any) => {
+	console.log('data', data, name)
+}
 </script>

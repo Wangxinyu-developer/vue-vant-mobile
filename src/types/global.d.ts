@@ -12,3 +12,7 @@ declare module 'nprogress' {
 	export function done(): void;
 	// ... 其他API声明
 }
+
+declare module 'vue-esign' {
+	export * from 'vue-esign/src/index.js';
+}
