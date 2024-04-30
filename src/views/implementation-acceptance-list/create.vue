@@ -230,16 +230,32 @@ const onClickLeft = () => {
 const onSubmit = (values: any) => {
     console.log('submit', values);
 };
-const onConfirm = ({ selectedValues }) => {
-    state[`${state.dateSelectAttr}`] = selectedValues.join('/');
+const onConfirm = ({ selectedValues }: { selectedValues: string[] }) => {
+    switch(state.dateSelectAttr) {
+        case 'startDate':
+            state.startDate = selectedValues.join('/');
+            break;
+        case 'acceptanceDate':
+            state.acceptanceDate = selectedValues.join('/');
+            break;
+    }
+    // state[`${state.dateSelectAttr}`] = selectedValues.join('/');
     state.showPicker = false;
 };
 const openDatePicker = (type: string) => {
     state.dateSelectAttr = type;
     state.showPicker = true;
 };
-const onConfirmSelect = ({ selectedOptions }) => {
-    state[`${state.selectedAttr}`] = selectedOptions[0]?.text;
+const onConfirmSelect = ({ selectedOptions }: { selectedOptions: any[] }) => {
+    // state[`${state.selectedAttr}`] = selectedOptions[0]?.text;
+    switch(state.selectedAttr) {
+        case 'salesManager':
+            state.salesManager = selectedOptions[0]?.text;
+            break;
+        case 'implementer':
+            state.implementer = selectedOptions[0]?.text;
+            break;
+    }
     state.showSelectPicker = false;
 };
 const openSelectPicker = (type: string) => {

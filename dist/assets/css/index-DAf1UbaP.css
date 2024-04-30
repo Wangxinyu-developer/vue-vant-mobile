@@ -1,0 +1,55 @@
+.acceptance-list-page[data-v-64af545b] {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.list-container[data-v-64af545b] {
+	flex: 1;
+	overflow-y: auto;
+}
+.list-container .acceptance-list-item[data-v-64af545b] {
+	width: 100%;
+}
+.list-container .acceptance-list-item .item-title[data-v-64af545b] {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #fff;
+}
+.list-container
+	.acceptance-list-item
+	.item-title
+	.item-title-left[data-v-64af545b] {
+	font-size: 16px;
+	color: #333;
+}
+.list-container
+	.acceptance-list-item
+	.item-title
+	.item-title-right[data-v-64af545b] {
+	font-size: 14px;
+	color: #333;
+}
+.list-container .acceptance-list-item .item-info[data-v-64af545b] {
+	padding: 5px 0;
+}
+.list-container .acceptance-list-item .item-info .info-item[data-v-64af545b] {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 20px;
+}
+.list-container
+	.acceptance-list-item
+	.item-info
+	.info-item
+	.info-item-label[data-v-64af545b],
+.list-container
+	.acceptance-list-item
+	.item-info
+	.info-item
+	.info-item-value[data-v-64af545b] {
+	font-size: 12px;
+}
