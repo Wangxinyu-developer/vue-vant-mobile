@@ -1,0 +1,38 @@
+.login[data-v-d3021d64] {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../png/homeBg-DVQ-Ss_c.png);
+	background-size: cover;
+}
+.login .infoForm[data-v-d3021d64] {
+	width: 90%;
+	height: fit-content;
+	border-radius: 15px;
+	background-color: #fff;
+	position: absolute;
+	top: calc(50% - 125px);
+	right: 0;
+	left: 0;
+	margin: auto;
+	box-shadow: 0 5px 10px #0000004d;
+}
+.login .infoForm .title[data-v-d3021d64] {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.login .infoForm .title .title-symbol[data-v-d3021d64] {
+	width: 72px;
+	height: 6px;
+	border-radius: 3px;
+	background-color: purple;
+	margin: 10px 0 5px calc(50% - 36px);
+}
+.login .infoForm .title .title-text[data-v-d3021d64] {
+	font-size: 18px;
+	font-weight: bolder;
+}
+.login .infoForm .login-btn[data-v-d3021d64] {
+	width: calc(100% - 32px);
+	margin: 16px;
+}
