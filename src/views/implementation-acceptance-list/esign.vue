@@ -5,10 +5,13 @@
 </template>
 
 <script setup name="SignaturePad" lang="ts">
-import { getCurrentInstance, reactive } from 'vue';
-const { proxy }: any = getCurrentInstance()
+import router from '@/router';
 
 const sureSignHandler = (data: any, name: any) => {
-	console.log('data', data, name)
+	// console.log('data', data, name);
+	router.replace({
+		path: '/acceptance/create',
+		query: { esignPic: data },
+	});
 }
 </script>

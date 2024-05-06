@@ -29,6 +29,7 @@
 
 <script>
 import { rotateBase64Img } from '@/utils/esign.js';
+import { showConfirmDialog } from 'vant';
 
 export default {
 	name: 'SignCanvas',
@@ -70,12 +71,12 @@ export default {
 		// 是否裁剪，在画布设定尺寸基础上裁掉四周空白部分
 		isCrop: {
 			type: Boolean,
-			default: false,
+			default: true,
 		},
 		// 清空画布时(reset)是否同时清空设置的背景色(bgColor)
 		isClearBgColor: {
 			type: Boolean,
-			default: true,
+			default: false,
 		},
 		// 生成图片格式 image/jpeg(jpg格式下生成的图片透明背景会变黑色请慎用或指定背景色)、 image/webp
 		format: {
@@ -115,20 +116,23 @@ export default {
 					/**
 					 * res：base64图片
 					 */
-					// rotateBase64Img(res, 270, `${this.signName ? this.signName + '-签名.jpg' : 'sign.jpg'}`, '', data => {
-					//   this.$emit('sureHandler', data)
-					// })
-					this.$emit(
-						'sureHandler',
-						res,
-						`${this.signName ? this.signName + '-签名.jpg' : 'sign.jpg'}`,
-					);
+					rotateBase64Img(res, 270, `${this.signName ? this.signName + '-签名.jpg' : 'sign.jpg'}`, '', data => {
+					  this.$emit('sureHandler', data)
+					})
 				})
 				.catch(err => {
 					console.log('err----', err);
-					this.$dialog.alert({
-						message: this.noSignTipText,
-					});
+					showConfirmDialog({
+						title: '提示',
+						message:
+							'请完成电子签名。',
+						})
+						.then(() => {
+							// on confirm
+						})
+						.catch(() => {
+							// on cancel
+					})
 				});
 		},
 	},

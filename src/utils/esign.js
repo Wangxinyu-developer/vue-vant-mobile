@@ -75,8 +75,8 @@ export function rotateBase64Img(src, edg, fileName, fileType, callback) {
 		}
 
 		ctx.putImageData(imgData, 0, 0);
-		callback(dataURLtoFile(canvas.toDataURL(), fileName, fileType));
-		// callback(canvas.toDataURL())
+		//   callback(dataURLtoFile(canvas.toDataURL(), fileName, fileType))
+		callback(canvas.toDataURL());
 	};
 }
 /**
@@ -86,13 +86,13 @@ export function rotateBase64Img(src, edg, fileName, fileType, callback) {
  *    fileType：文件格式
  */
 export function dataURLtoFile(dataURL, fileName, fileType) {
-	// const arr = dataURL.split(',')
-	// const mime = arr[0].match(/:(.*?);/)[1]
-	// const bstr = atob(arr[1])
-	// let n = bstr.length
-	// const u8arr = new Uint8Array(n)
-	// while (n--) {
-	//   u8arr[n] = bstr.charCodeAt(n)
-	// }
+	const arr = dataURL.split(',');
+	const mime = arr[0].match(/:(.*?);/)[1];
+	const bstr = atob(arr[1]);
+	let n = bstr.length;
+	const u8arr = new Uint8Array(n);
+	while (n--) {
+		u8arr[n] = bstr.charCodeAt(n);
+	}
 	return new File([u8arr], fileName, { type: fileType || 'image/jpg' });
 }
