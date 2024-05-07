@@ -214,9 +214,14 @@
                         </div>
                     </van-popup>
                 </van-cell-group>
-                <div style="margin: 16px;">
-                    <van-button round block type="primary" native-type="submit"> 提交 </van-button>
-                </div>
+                <van-action-bar>
+                    <van-action-bar-button color="#7232dd" type="danger" text="确 定"  native-type="submit" />
+                    <van-action-bar-button color="#be99ff" type="warning" text="取 消" @click="cancel" />
+                </van-action-bar>
+                <!-- <div style="margin: 16px;">
+                    <van-button type="primary" native-type="submit"> 确 定 </van-button>
+                    <van-button type="primary"> 取 消 </van-button>
+                </div> -->
             </van-form>
         </div>
     </div>
@@ -229,7 +234,7 @@ import _ from 'lodash';
 const state = reactive({
     vantForm: {
         // 项目名称
-        projectName: '21312',
+        projectName: '',
         // 项目地址
         address: '',
         // 所属单位
@@ -304,8 +309,8 @@ onMounted(() => {
         { text: 2, value: 2 }
     ];
     state.projectOptions = [
-        { text: '项目a1', value: 1 },
-        { text: '项目b2', value: 2 }
+        { text: '项目a1', value: '项目a1' },
+        { text: '项目b2', value: '项目b2' }
     ];
     state.originProjectOptions = _.cloneDeep(state.projectOptions);
     if(router.currentRoute.value.query.esignPic) {
@@ -314,6 +319,9 @@ onMounted(() => {
         state.vantForm.signBase64 = router.currentRoute.value.query.esignPic;
     }
 });
+const cancel = () => {
+    router.go(-1);
+};
 const onChange = () => {
     console.log('state.projectFilterString is', state.projectFilterString);
     
@@ -323,8 +331,10 @@ const onChange = () => {
         state.projectOptions = state.originProjectOptions.filter(item => item.text.includes(state.projectFilterString))
     }
 }
-const projectConfirm = () => {
-    state.showProjectFilter = false; 
+const projectConfirm = (selectedValues: any) => {
+    console.log("selectedValues is", selectedValues['selectedValues'].join(','))
+    state.vantForm.projectName = selectedValues['selectedValues'].join(',');
+    state.showProjectFilter = false;
 }
 const projectCancel = () => {
     state.showProjectFilter = false;
@@ -460,9 +470,6 @@ const onConfirmSelect = ({ selectedOptions }: { selectedOptions: any[] }) => {
         case 'salesManager':
             state.vantForm.salesManager = selectedOptions[0]?.text;
             break;
-        case 'implementer':
-            state.vantForm.implementer = selectedOptions[0]?.text;
-            break;
     }
     state.showSelectPicker = false;
 };
@@ -508,6 +515,7 @@ const addHardware = () => {
     .form-container {
         flex: 1;
         overflow-y: auto;
+        padding-bottom: var(--bottom-bar-height, 50px);
     }
 
 .search-data-popup {

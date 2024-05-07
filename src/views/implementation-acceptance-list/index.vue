@@ -3,7 +3,7 @@
         <van-nav-bar title="列表" />
         <van-search v-model="state.searchKey" placeholder="请输入搜索关键词" />
         <div class="list-container">
-                <div class="acceptance-list-item" v-for="(item, index) in 15">
+                <div class="acceptance-list-item" v-for="(item, index) in 15" @click="toImplementDetail(item)">
                 <div class="item-title">
                     <div class="item-title-left">凤凰岭项目{{ item }}</div>
                     <div class="item-title-right">验收合格</div>
@@ -40,6 +40,9 @@ const container = ref();
 const onClickCreate = () => {
     router.push('/acceptance/create');
 };
+const toImplementDetail = () => {
+    router.push('/acceptance/detail');
+}
 </script>
 <style lang="less" scoped>
 .acceptance-list-page {
