@@ -1,4 +1,4 @@
-.acceptance-create-page[data-v-63f2fc46] {
+.acceptance-create-page[data-v-867e7831] {
 	width: 100vw;
 	height: calc(
 		100% - var(--status-bar-height, 0px) - var(--bottom-bar-height, 0px)
@@ -7,11 +7,12 @@
 	display: flex;
 	flex-direction: column;
 }
-.acceptance-create-page .form-container[data-v-63f2fc46] {
+.acceptance-create-page .form-container[data-v-867e7831] {
 	flex: 1;
 	overflow-y: auto;
+	padding-bottom: var(--bottom-bar-height, 50px);
 }
-.acceptance-create-page .search-data-popup .header-line[data-v-63f2fc46] {
+.acceptance-create-page .search-data-popup .header-line[data-v-867e7831] {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -20,24 +21,24 @@
 .acceptance-create-page
 	.search-data-popup
 	.header-line
-	.cancel[data-v-63f2fc46] {
+	.cancel[data-v-867e7831] {
 	padding: 0 16px;
 	font-size: 14px;
 	color: #969799;
 }
-.acceptance-create-page .search-data-popup .header-line .sure[data-v-63f2fc46] {
+.acceptance-create-page .search-data-popup .header-line .sure[data-v-867e7831] {
 	padding: 0 16px;
 	font-size: 14px;
 	color: #576b95;
 }
-.acceptance-create-page .search-data-popup .lists[data-v-63f2fc46] {
+.acceptance-create-page .search-data-popup .lists[data-v-867e7831] {
 	display: flex;
 	flex-direction: column;
 	padding: 10px 12px 20px;
 	height: 200px;
 	overflow: auto;
 }
-.acceptance-create-page .search-data-popup .lists .line[data-v-63f2fc46] {
+.acceptance-create-page .search-data-popup .lists .line[data-v-867e7831] {
 	line-height: 40px;
 	font-size: 16px;
 	color: #000;
@@ -45,10 +46,10 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.acceptance-create-page .search-data-popup .lists .van-icon[data-v-63f2fc46] {
+.acceptance-create-page .search-data-popup .lists .van-icon[data-v-867e7831] {
 	color: #005bff;
 }
-.from-popup-field .van-field__control[data-v-63f2fc46] {
+.from-popup-field .van-field__control[data-v-867e7831] {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
@@ -62,7 +63,7 @@
 	border: 0;
 	resize: none;
 }
-.from-popup .van-picker__cancel[data-v-63f2fc46],
-.from-popup .van-picker__confirm[data-v-63f2fc46] {
+.from-popup .van-picker__cancel[data-v-867e7831],
+.from-popup .van-picker__confirm[data-v-867e7831] {
 	color: #fc9153;
 }
